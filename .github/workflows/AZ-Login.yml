@@ -26,7 +26,7 @@ jobs:
         uses: azure/arm-deploy@v1
         with:
           subscriptionId: ${{ secrets.SUB_SECRET}}
-          resourceGroupName: ${{ secrets.TEAM16RG }}
+          resourceGroupName: ${{ vars.TEAM16RG }}
           template: ./InfrastructureAsCode/main.bicep
       
 
