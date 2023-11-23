@@ -1,0 +1,25 @@
+# File: .github/workflows/workflow.yml
+
+name: Run Azure Login with OIDC
+on: [push]
+
+permissions:
+      id-token: write
+      contents: read
+jobs: 
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Azure login
+        uses: azure/wth-team16@jufranzemsfthotmailcom.onmicrosoft.com
+        with:
+          client-id: ${{ 3763210a-929b-4410-9949-da72e4528b83 }}
+          tenant-id: ${{ 49f6e1af-264e-446e-9a94-efc09ca55be9 }}
+          subscription-id: ${{ 69c46380-11fc-4928-8685-6308b12a57e2 }}
+  
+      - name: Azure CLI script
+        uses: azure/CLI@v1
+        with:
+          azcliversion: latest
+          inlineScript: |
+            az account show
