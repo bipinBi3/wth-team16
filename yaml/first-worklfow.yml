@@ -1,0 +1,27 @@
+name: First Workflow
+
+on:
+ workflow_dispatch:
+
+jobs:
+ job1:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Step 1
+      run: |
+        echo "Step 1"
+
+    - name: Step 2
+      run: |
+        echo "Step 2"
+
+ job2:
+    needs: job1
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Run Cowsay
+      uses: bschmitt/Cowsay-action@v1.0.0
+      with:
+        args: 'Hello, world!'
