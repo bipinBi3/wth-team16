@@ -22,6 +22,8 @@ jobs:
 
     steps:
     - name: Run Cowsay
-      uses: bschmitt/Cowsay-action@v1.0.0
+      uses: mscoutermarsh/cowsays-action@master
       with:
-        args: 'Hello, world!'
+        text: 'Hello, Team 16!'
+        color: 'grey'
+        
