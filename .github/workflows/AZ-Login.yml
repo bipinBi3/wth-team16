@@ -27,6 +27,6 @@ jobs:
         with:
           subscriptionId: ${{ secrets.SUB_SECRET}}
           resourceGroupName: ${{ vars.TEAM16RG }}
-          template: /workspaces/wth-team16/InfrastructureAsCode/main.bicep
+          template: .InfrastructureAsCode/main.bicep
       
 
