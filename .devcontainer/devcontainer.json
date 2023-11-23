@@ -5,6 +5,7 @@
 		"ghcr.io/devcontainers/features/azure-cli:1": {
 			"installBicep": true,
 			"version": "latest"
-		}
+			// devcontainer
+		} 
 	}
 }
